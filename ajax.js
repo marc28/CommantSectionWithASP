@@ -24,7 +24,7 @@ function insertCommentsAjax() {
         $('#error').html("Error");
     } else {
         $('#error').html("");
-        var url = "http://localhost:49461/CommentSectionWithASP/InsertComment.ashx?name=" + name + "&comment=" + comment; //this is the josn object displayed
+        var url = "./InsertComment.ashx?name=" + name + "&comment=" + comment; //this is the josn object displayed
         $.ajax({
             "url": url,
             "success": function (data) {
@@ -46,7 +46,7 @@ function insertCommentsAjax() {
 //On Page Load!!!!
 function retrieveCommentsAjax() {
 
-        var url = "http://localhost:49461/CommentSectionWithASP/InsertComment.ashx"; //this is the josn object displayed
+        var url = "./InsertComment.ashx"; //this is the josn object displayed
         $.ajax({
             "url": url,
             "success": function (data) {
